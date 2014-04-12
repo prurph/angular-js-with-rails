@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
+gem 'bower-rails'
+
 group :test, :development do
   gem 'rspec'
   gem 'rspec-rails', '~> 2.0'
