@@ -1,8 +1,10 @@
 receta = angular.module('receta', [
   'templates',
   'ngRoute',
-  'controllers',
   'ngResource'
+  'controllers',
+  'angular-flash.service',
+  'angular-flash.flash-alert-directive'
 ])
 
 receta.config([ '$routeProvider',
@@ -11,6 +13,9 @@ receta.config([ '$routeProvider',
       .when('/',
         templateUrl: 'index.html',
         controller:  'RecipesController'
+      ).when('/recipes/:recipeId',
+        templateUrl: 'show.html',
+        controller:  'RecipeController'
       )
 ])
 
